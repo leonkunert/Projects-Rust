@@ -1,16 +1,15 @@
-
-fn is_prime(num :u64) -> bool {
-    for i in range(2, num) {
-        if num % i == 0 {
+fn is_prime(num :f64) -> bool {
+    for i in range(2, num.sqrt() as u64) {
+        if num as u64 % i == 0 {
             return false
         }
     }
     true
 }
 
-fn fatorize_prime(num :u64) {
-    for i in range(2, num) {
-        if num % i == 0 && is_prime(i) {
+fn fatorize_prime(num :f64) {
+    for i in range(2, num.sqrt() as u64) {
+        if num as u64 % i == 0 && is_prime(i as f64) {
             println!("{}", i);
         }
     }
@@ -27,5 +26,5 @@ fn is_prime_test2() {
 }
 
 fn main() {
-    fatorize_prime(2332377667);
+    fatorize_prime(233237766723323232f64);
 }
