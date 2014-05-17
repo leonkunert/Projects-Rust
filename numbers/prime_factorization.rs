@@ -1,6 +1,6 @@
 fn is_prime(num :f64) -> bool {
-    for i in range(2, num.sqrt() as u64) {
-        if num as u64 % i == 0 {
+    for i in range(2, (num.sqrt() as uint + 1)) {
+        if num as uint % i == 0 {
             return false
         }
     }
@@ -8,8 +8,8 @@ fn is_prime(num :f64) -> bool {
 }
 
 fn fatorize_prime(num :f64) {
-    for i in range(2, num.sqrt() as u64) {
-        if num as u64 % i == 0 && is_prime(i as f64) {
+    for i in range(2, (num.sqrt() as uint + 1)) {
+        if num as uint % i == 0 && is_prime(i as f64) {
             println!("{}", i);
         }
     }
@@ -17,12 +17,17 @@ fn fatorize_prime(num :f64) {
 
 #[test]
 fn is_prime_test() {
-    assert!(is_prime(4) == false, "{} {} {}", is_prime(4), false, 4);
+    assert!(is_prime(4f64) == false, "is {} expected {} {}", is_prime(4f64), false, 4);
 }
 
 #[test]
 fn is_prime_test2() {
-    assert!(is_prime(5) == true, "{} {} {}", is_prime(5), true, 5);
+    assert!(is_prime(5f64) == true, "is {} expected {} {}", is_prime(5f64), true, 5);
+}
+
+#[test]
+fn is_prime_test3() {
+    assert!(is_prime(9f64) == false, "is {} expected {} {}", is_prime(9f64), false, 9);
 }
 
 fn main() {
