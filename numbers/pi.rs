@@ -6,6 +6,7 @@ fn get_pi(num :uint) ->~str {
 }
 
 /* Build Tests with rustc --test *file*.rs*/
+
 #[test]
 fn get_pi_test() {
     assert!(get_pi(12) == to_str_digits(3.1415927410125732421875f32, 12), "{} {}", get_pi(12), 3.141592741013);
