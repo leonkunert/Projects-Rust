@@ -1,6 +1,6 @@
 
 fn reverse_string(string :~str) -> ~str{
-    string.chars_rev().collect()
+    string.chars().rev().collect()
 }
 
 #[test]
