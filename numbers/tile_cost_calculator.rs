@@ -1,8 +1,10 @@
 use std::io;
 
 fn to_interger(string :~str) -> int {
-    println!("{} {}", string, from_str::<int>(string));
-    match from_str::<int>(string) {
+    /* Complex workaround the string comes with a \n attached,
+     * so I have to slice it off
+     */
+    match from_str::<int>(string.slice_to(string.len() - 1)) {
         Some(0) => 0,
         Some(x) => x,
         _       => 0
