@@ -1,10 +1,7 @@
 use std::io;
 
 fn to_interger(string :~str) -> int {
-    /* Complex workaround the string comes with a \n attached,
-     * so I have to slice it off
-     */
-    match from_str::<int>(string.slice_to(string.len() - 1)) {
+    match from_str::<int>(string.trim()) {
         Some(0) => 0,
         Some(x) => x,
         _       => 0
