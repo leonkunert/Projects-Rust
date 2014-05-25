@@ -1,7 +1,7 @@
 use std::f32::to_str_digits;
-use std::num::atan;
+use std::num::FloatMath;
 
-fn get_pi(num :uint) ->~str {
+fn get_pi(num :uint) -> StrBuf {
     to_str_digits(16f32*atan(1f32/5f32)-4f32*atan(1f32/239f32), num)
 }
 
