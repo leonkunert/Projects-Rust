@@ -1,6 +1,6 @@
 use std::io;
 
-fn to_interger(string :~str) -> int {
+fn to_interger(string :String) -> int {
     match from_str::<int>(string.trim()) {
         Some(0) => 0,
         Some(x) => x,

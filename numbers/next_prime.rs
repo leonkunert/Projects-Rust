@@ -11,6 +11,7 @@ fn is_prime(num :f64) -> bool {
 
 fn main() {
     let mut i = 2;
+    println!("Press Enter for the next Prime");
     for line in io::stdin().lines() {
         while !is_prime(i as f64) {
             i += 1;
