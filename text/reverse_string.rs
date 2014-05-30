@@ -14,5 +14,5 @@ fn reverse_string_test_unicode(){
 }
 
 fn main() {
-    println!("{}",reverse_string("fdsfsd"));
+    println!("{}",reverse_string("ollah"));
 }

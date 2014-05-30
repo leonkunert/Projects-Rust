@@ -1,4 +1,4 @@
-fn fibbonacci(num :u64) {
+/*fn fibbonacci(num :u64) {
     let mut _curr:u64 = 1;
     let mut prev:u64 = 0;
     let mut _cont:u64 = 0;
@@ -9,7 +9,7 @@ fn fibbonacci(num :u64) {
         prev = _cont;
     }
 }
-
+*/
 fn fibbonacci_func_caller(num :u64) {
     fibbonacci_func(num, 0, 1);
 }
