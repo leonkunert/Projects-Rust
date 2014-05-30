@@ -1,7 +1,9 @@
+extern crate debug;
+
 use std::io;
 
 fn to_interger(string :String) -> int {
-    match from_str::<int>(string.trim()) {
+    match from_str::<int>(string.as_slice().trim()) {
         Some(0) => 0,
         Some(x) => x,
         _       => 0
